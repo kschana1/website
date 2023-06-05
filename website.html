@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Website</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js"></script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#section2">Ethics Of Computer Science</a></li>
+            <li><a href="#section3">The Ten Commandments of Computer Ethics</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <section id="section1">
+            <h1>Welcome to My Website</h1>
+            <p>Hi this is my cool website</p>
+			<p>Try use the button in the bottom left</p>
+        </section>
+
+        <section id="section2">
+            <h2>Morals and ethics</h2>
+            <p>
+                Morals are the internal principles that an individual uses to make decisions about what is right and wrong. These principles are not always shared by all members of a community, but they often originate from commonly held beliefs and are reinforced through interaction with other people.
+            </p>
+            <p>
+                Ethics are shared morals that a particular group of people recognise as necessary to ensure that the group behaves positively based on its own context.
+            </p>
+            <p>
+                Morals, ethics, and laws are closely linked, and laws often reflect people's morals and ethics. However, if something is immoral or unethical, it does not mean that it is also illegal. For example, it is not illegal for someone in your family to read your diary, but you would probably agree that it is not the right way to behave. It is also true that if something is illegal in the context of one group, it may be ethical in the context of a different group.
+            </p>
+            <p>
+                Click the link below to visit a website that contains information about the ethics of computer science.
+                <br>
+                <a href="https://isaaccomputerscience.org/concepts/iot_impacts_concepts?examBoard=all&stage=all" target="_blank">Visit Ethics of Computer Science Website</a>
+            </p>
+			
+			<div class = "video">
+				
+			<iframe
+				
+				width="560" height="315" src="https://www.youtube.com/embed/v-CGRMTHzzs" frameborder="0" allowfullscreen>
+		
+ 	
+		
+			</iframe>
+			
+				
+			
+		</div>
+			
+			
+			
+        </section>
+
+        <section id="section3">
+            <h2>The Ten Commandments of Computer Ethics</h2>
+            <p>The Computer Ethics Institute conducts research to explore how technology and ethics interact. In 1992, they published the Ten Commandments of Computer Ethics, which makes an excellent guide for evaluating the ethical impacts of a technology.</p>
+            <p>Thou shalt not use a computer to harm other people.</p>
+            <p>Thou shalt not interfere with other people's computer work.</p>
+            <p>Thou shalt not snoop around in other people's computer files.</p>
+            <p>Thou shalt not use a computer to steal.</p>
+            <p>Thou shalt not use a computer to bear false witness.</p>
+            <p>Thou shalt not copy or use proprietary software for which you have not paid (without permission)</p>
+            <p>Thou shalt not use other people's computer resources without authorization or proper compensation.</p>
+            <p>Thou shalt not appropriate other people's intellectual output.</p>
+            <p>Thou shalt think about the social consequences of the program you are writing or the system you are designing.</p>
+            <p>Thou shalt always use a computer in ways that ensure consideration and respect for other humans.</p>
+        </section>
+    </div>
+
+    <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <span class="cross-icon"></span>
+    </button>
+	
+	
+	<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var sidebarLinks = document.querySelectorAll(".sidebar a");
+
+            sidebarLinks.forEach(function(link) {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+
+                    var targetSection = document.querySelector(this.getAttribute("href"));
+                    targetSection.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+	
+	
+</body>
+</html>
